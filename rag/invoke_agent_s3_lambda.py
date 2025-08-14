@@ -9,31 +9,41 @@ s3_client = boto3.client('s3')
 
 # Configuration
 agent_id = 'OWEMRO6IAT'
-agent_alias_id = 'LDOXC5OFNQ'
-s3_bucket = 's3://lucky8bucket'  # Replace with your actual bucket name
-# user_input = 'give me information about ID'
+agent_alias_id = 'TSTALIASID'
+s3_bucket = 'lucky8bucket'  # Replace with your actual bucket name
+user_input = 'Run instruction for all contact_ids found. If multiple conversations are found, return all details from them.'
 
 def lambda_handler(event, context):
     try:
-        print(f'Raw event: {event}')
+        print(f'Raw event: {json.dumps(event, default=str)}')
         
-        # Handle different event sources (API Gateway, direct invoke, etc.)
-        if 'body' in event and event['body']:
-            # API Gateway event
-            if isinstance(event['body'], str):
-                body = json.loads(event['body'])
+        # Handle different event sources
+        if 'body' in event:
+            if event['body'] is None:
+                body = {}
+            elif isinstance(event['body'], str):
+                body = json.loads(event['body']) if event['body'] else {}
             else:
                 body = event['body']
         else:
-            # Direct Lambda invoke or other sources
+            # Direct Lambda invoke
             body = event
         
-        print(f'Parsed body: {body}')
+        print(f'Parsed body: {json.dumps(body, default=str)}')
         
-        # Extract parameters with proper fallbacks
-        user_input = body.get('input', body.get('inputText', ''))
+        # Extract input with fallbacks and validation
+        user_input = (
+            body.get('input') or 
+            body.get('inputText') or 
+            body.get('message') or 
+            body.get('query') 
+        ).strip()
+        
         session_id = body.get('sessionId', str(uuid.uuid4()))
         
+        print(f'Processing - user_input: "{user_input}", session_id: "{session_id}"')
+        
+        # Validate input is not empty
         if not user_input:
             return {
                 'statusCode': 400,
@@ -42,11 +52,11 @@ def lambda_handler(event, context):
                     'Access-Control-Allow-Origin': '*'
                 },
                 'body': json.dumps({
-                    'error': 'Missing required parameter: input or inputText'
+                    'error': 'Missing required parameter',
+                    'message': 'inputText cannot be empty. Please provide input in one of: input, inputText, message, or query',
+                    'received_body': body
                 })
             }
-        
-        print(f'Processing input: {user_input}, sessionId: {session_id}')
         
         # Invoke the agent with proper parameter name
         response = bedrock_agent_runtime.invoke_agent(
