@@ -1,0 +1,57 @@
+aws:
+  region: us-east-1
+  bedrock:
+    model_id: anthropic.claude-v2
+    max_tokens: 4096
+    temperature: 0.7
+  s3:
+    bucket_name: lucky8bucket
+    bucket_url: https://us-west-2.console.aws.amazon.com/s3/buckets/lucky8bucket?region=us-west-2&bucketType=general&tab=objects
+    prefixes:
+      raw_data: "raw-call-data/"
+      processed_data: "processed-call-data/"
+      knowledge_base: "knowledge-base/"
+      analytics: "analytics/"
+
+agent:
+  name: CallCenterAI
+  version: 1.0.0
+  capabilities:
+    - call_summarization
+    - sentiment_analysis
+    - compliance_checking
+    - agent_coaching
+    - rag_assistance
+    - real_time_suggestions
+    - performance_analytics
+
+rag:
+  embedding_model: "all-MiniLM-L6-v2"
+  vector_dimension: 384
+  similarity_threshold: 0.7
+  max_similar_cases: 10
+  knowledge_base_path: "data/knowledge_base.pkl"
+  auto_update_interval: "24h"
+  categories:
+    - billing
+    - technical
+    - account
+    - service
+    - roaming
+    - data
+    - other
+
+analytics:
+  performance_metrics:
+    - resolution_rate
+    - average_handle_time
+    - customer_satisfaction
+    - first_call_resolution
+  reporting_intervals:
+    - daily
+    - weekly
+    - monthly
+  alert_thresholds:
+    low_resolution_rate: 0.7
+    high_handle_time: 600  # seconds
+    negative_sentiment_spike: 0.3
