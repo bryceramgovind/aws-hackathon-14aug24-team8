@@ -2,11 +2,13 @@ version: 1.0
 runtime: python3
 build:
   commands:
-    pre-build:
-      - echo "Pre-build started"
-      - python3 --version
-    build:
-      - pip3 install -r requirements.txt
+    - echo "=== Build started ==="
+    - python3 --version
+    - pip3 --version
+    - ls -la
+    - echo "=== Installing requirements ==="
+    - pip3 install -r requirements.txt
+    - echo "=== Build completed ==="
 run:
   runtime-version: 3.8
   command: streamlit run app.py --server.port 8080 --server.address 0.0.0.0 --server.headless true
