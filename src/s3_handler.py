@@ -94,20 +94,6 @@ class S3CallCenterHandler:
                 s3_key = f"transcripts/{timestamp}/{call_id}_transcript.json"
                 content_type = 'application/json'
                 
-            elif format == 'txt':
-                if isinstance(transcript, dict):
-                    content = transcript.get('transcript', str(transcript))
-                else:
-                    content = str(transcript)
-                s3_key = f"transcripts/{timestamp}/{call_id}_transcript.txt"
-                content_type = 'text/plain'
-                
-            elif format == 'vtt':
-                # Convert to WebVTT format if needed
-                content = self._convert_to_vtt(transcript)
-                s3_key = f"transcripts/{timestamp}/{call_id}_transcript.vtt"
-                content_type = 'text/vtt'
-                
             else:
                 raise ValueError(f"Unsupported format: {format}")
             
@@ -159,7 +145,7 @@ class S3CallCenterHandler:
         """
         try:
             timestamp = datetime.now().strftime('%Y/%m/%d')
-            s3_key = f"analytics/{timestamp}/{call_id}_analytics.json"
+            s3_key = f"analytics/{timestamp}/{call_id}_enrich.json"
             
             # Add metadata to analytics
             analytics_data['_metadata'] = {
