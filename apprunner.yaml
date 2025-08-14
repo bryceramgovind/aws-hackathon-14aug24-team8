@@ -1,40 +1,36 @@
-# Advanced apprunner.yaml for Streamlit app with environment variables and secrets
 version: 1.0
-runtime: python311
+
+runtime: python3
 
 build:
+
   commands:
+
     pre-build:
-      - echo "Starting build process..."
+
+      - echo "=== Pre-build started ==="
+
+      - python3 --version
+
+      - pip3 --version
+
+      - ls -la
+
     build:
-      - pip3 install --upgrade pip
+
+      - echo "=== Installing requirements ==="
+
       - pip3 install -r requirements.txt
-    post-build:
-      - echo "Build completed successfully"
-  env:
-    - name: BUILD_ENV
-      value: "production"
+
+      - echo "=== Build completed ==="
 
 run:
-  runtime-version: 3.11
-  pre-run:
-    - pip3 install --upgrade streamlit
-  command: streamlit run app.py --server.port=8080 --server.address=0.0.0.0 --server.headless=true --server.enableCORS=false --server.enableXsrfProtection=false
+
+  runtime-version: 3.8
+
+  command: streamlit run app.py --server.port 8080 --server.address 0.0.0.0 --server.headless true
+
   network:
+
     port: 8080
-    env: PORT
-  env:
-    - name: STREAMLIT_SERVER_PORT
-      value: "8080"
-    - name: STREAMLIT_SERVER_ADDRESS
-      value: "0.0.0.0"
-    - name: STREAMLIT_SERVER_HEADLESS
-      value: "true"
-    - name: STREAMLIT_BROWSER_GATHER_USAGE_STATS
-      value: "false"
-  # Example secrets configuration (uncomment and modify as needed)
-  # secrets:
-  #   - name: DATABASE_URL
-  #     value-from: "arn:aws:secretsmanager:us-east-1:123456789012:secret:database-url"
-  #   - name: API_KEY
-  #     value-from: "arn:aws:ssm:us-east-1:123456789012:parameter/api-key"
+ 
