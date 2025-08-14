@@ -1,0 +1,18 @@
+aws:
+  region: us-east-1
+  bedrock:
+    model_id: anthropic.claude-v2
+    max_tokens: 4096
+    temperature: 0.7
+  s3:
+    bucket: https://us-west-2.console.aws.amazon.com/s3/buckets/lucky8bucket?region=us-west-2&bucketType=general&tab=objects
+    prefixes:
+
+agent:
+  name: CallCenterAI
+  version: 1.0.0
+  capabilities:
+    - call_summarization
+    - sentiment_analysis
+    - compliance_checking
+    - agent_coaching
