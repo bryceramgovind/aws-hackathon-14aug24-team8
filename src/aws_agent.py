@@ -53,15 +53,11 @@ class AWSCallCenterAgent:
         
         # Initialize specialized Bedrock client
         self.bedrock_analyzer = BedrockCallAnalyzer(self.region)
-        
-        # Agent settings
-        self.agent_name = self.config['agent']['name']
-        self.capabilities = self.config['agent']['capabilities']
+
         
         # Knowledge base loaded flag
         self.knowledge_base_loaded = False
         
-        logger.info(f"Initialized {self.agent_name} with capabilities: {self.capabilities}")
     
     def _init_aws_clients(self):
         """Initialize AWS service clients"""
@@ -594,3 +590,52 @@ class AWSCallCenterAgent:
             raise
     
     
+=======
+    def process_call_recording(self, s3_key: str) -> Dict[str, Any]:
+        """Process a call recording from S3"""
+        try:
+            # Start transcription job
+            job_name = f"call-transcription-{datetime.now().strftime('%Y%m%d%H%M%S')}"
+            
+            self.transcribe_client.start_transcription_job(
+                TranscriptionJobName=job_name,
+                Media={
+                    'MediaFileUri': f"s3://{self.config['aws']['s3']['bucket']}/{s3_key}"
+                },
+                MediaFormat='mp3',  # Adjust based on your audio format
+                LanguageCode='en-US',
+                Settings={
+                    'ShowSpeakerLabels': True,
+                    'MaxSpeakerLabels': 2
+                }
+            )
+            
+            # Wait for transcription to complete
+            while True:
+                status = self.transcribe_client.get_transcription_job(
+                    TranscriptionJobName=job_name
+                )
+                if status['TranscriptionJob']['TranscriptionJobStatus'] in ['COMPLETED', 'FAILED']:
+                    break
+                time.sleep(5)
+            
+            if status['TranscriptionJob']['TranscriptionJobStatus'] == 'COMPLETED':
+                # Get transcript
+                transcript_uri = status['TranscriptionJob']['Transcript']['TranscriptFileUri']
+                transcript_response = requests.get(transcript_uri)
+                transcript_data = transcript_response.json()
+                
+                return {
+                    'status': 'success',
+                    'transcript': transcript_data['results']['transcripts'][0]['transcript'],
+                    'job_name': job_name
+                }
+            else:
+                return {
+                    'status': 'failed',
+                    'error': 'Transcription job failed'
+                }
+                
+        except Exception as e:
+            logger.error(f"Error processing call recording: {e}")
+            return {'status': 'error', 'error': str(e)}
