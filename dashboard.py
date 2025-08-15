@@ -990,7 +990,7 @@ def create_dark_template():
 
 def send_chat_message(message, conversation_history):
     """Send message to the chat API"""
-    api_url = "https://76wnfi088i.execute-api.us-west-2.amazonaws.com/PROD/chat"
+    api_url = "https://bjbarl518f.execute-api.us-west-2.amazonaws.com/PROD"
     
     headers = {
         "Content-Type": "application/json",
