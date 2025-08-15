@@ -53,6 +53,85 @@ body {
 footer {visibility: hidden;}
 header {visibility: hidden;}
 
+/* Sidebar Toggle Button Styling */
+button[data-testid="collapsedControl"] {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+    border: 1px solid #475569 !important;
+    border-radius: 12px !important;
+    color: #ffffff !important;
+    padding: 12px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease !important;
+    position: fixed !important;
+    top: 20px !important;
+    left: 20px !important;
+    z-index: 1000 !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+button[data-testid="collapsedControl"]:hover {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Make sure the toggle is always visible */
+.stButton[data-testid="collapsedControl"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Sidebar state indicator */
+button[data-testid="collapsedControl"]::before {
+    content: "🎛️" !important;
+    font-size: 20px !important;
+}
+
+/* Alternative selectors for the toggle button */
+.css-1544g2n button,
+.css-r421ms button,
+[data-testid="baseButton-headerNoPadding"],
+.stSidebar button[kind="headerNoPadding"] {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+    border: 1px solid #475569 !important;
+    border-radius: 12px !important;
+    color: #ffffff !important;
+    padding: 12px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+/* When sidebar is collapsed, show a floating toggle */
+.main:not(:has(.stSidebar)) {
+    position: relative;
+}
+
+.main:not(:has(.stSidebar))::before {
+    content: "🎛️";
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 1px solid #475569;
+    border-radius: 12px;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Header styling */
 .main h1 {
     font-family: 'Inter', sans-serif;
@@ -230,49 +309,51 @@ header {visibility: hidden;}
     border-color: #334155 !important;
 }
 
-/* Sidebar dark styling */
-.css-1d391kg {
-    background: #1e293b !important;
-    border-radius: 16px !important;
-    padding: 24px !important;
-    border: 1px solid #334155 !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Additional sidebar selectors */
-.css-sidebar {
-    background: #1e293b !important;
-    border-radius: 16px !important;
-    padding: 24px !important;
-    border: 1px solid #334155 !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Streamlit sidebar container */
-.stSidebar {
-    background: #1e293b !important;
-    border-radius: 16px !important;
-    padding: 24px !important;
-    border: 1px solid #334155 !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Sidebar content area */
-.stSidebar > div {
-    background: #1e293b !important;
-    border-radius: 16px !important;
-    padding: 24px !important;
-    border: 1px solid #334155 !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Generic sidebar selector */
+/* Modern Sidebar Design - Dark Theme - Fixed Visibility */
 section[data-testid="stSidebar"] {
-    background: #1e293b !important;
-    border-radius: 16px !important;
-    padding: 24px !important;
-    border: 1px solid #334155 !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+    background: #0f172a !important;
+    border: none !important;
+    padding: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.stSidebar {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.stSidebar > div {
+    background: #0f172a !important;
+    padding: 20px !important;
+    border: none !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Sidebar content wrapper */
+.stSidebar .block-container {
+    background: #0f172a !important;
+    padding: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Modern filter section headers */
+.stSidebar .section-header {
+    color: #ffffff !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin: 24px 0 16px 0 !important;
+    text-align: left !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* First section header spacing */
+.stSidebar .section-header:first-of-type {
+    margin-top: 0 !important;
 }
 
 /* Tab styling - dark theme */
@@ -306,62 +387,129 @@ section[data-testid="stSidebar"] {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Tab panel styling */
+/* Tab panel styling - Compact for chat */
 .stTabs [data-baseweb="tab-panel"] {
     background: #1e293b !important;
     border-radius: 16px !important;
-    padding: 24px !important;
-    margin-top: 16px !important;
+    padding: 16px !important;
+    margin-top: 8px !important;
     border: 1px solid #334155 !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Sidebar filter styling */
-.stSelectbox > div > div {
-    background: #f0f0f3 !important;
-    border-radius: 12px !important;
-    border: none !important;
-    box-shadow: 4px 4px 8px #d1d1d4, -4px -4px 8px #ffffff !important;
-    transition: all 0.3s ease !important;
+/* Make chat tab extra compact */
+.stTabs [data-baseweb="tab-panel"]:has(.section-header:contains("Interactive Chat Assistant")) {
+    padding: 8px !important;
+    margin-top: 4px !important;
 }
 
-.stSelectbox > div > div:hover {
-    box-shadow: 6px 6px 12px #d1d1d4, -6px -6px 12px #ffffff !important;
+/* Modern Filter Components - Dark Theme */
+
+/* Date Input Styling */
+.stSidebar .stDateInput > div > div {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
+}
+
+.stSidebar .stDateInput > div > div:hover {
+    border-color: #475569 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     transform: translateY(-1px) !important;
 }
 
-.stMultiSelect > div > div {
-    background: #f0f0f3 !important;
-    border-radius: 12px !important;
-    border: none !important;
-    box-shadow: 4px 4px 8px #d1d1d4, -4px -4px 8px #ffffff !important;
-    transition: all 0.3s ease !important;
+.stSidebar .stDateInput > div > div:focus-within {
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
 }
 
-.stMultiSelect > div > div:hover {
-    box-shadow: 6px 6px 12px #d1d1d4, -6px -6px 12px #ffffff !important;
+.stSidebar .stDateInput input {
+    background: transparent !important;
+    color: #e2e8f0 !important;
+    border: none !important;
+    font-size: 14px !important;
+}
+
+/* Multi-Select Styling */
+.stSidebar .stMultiSelect > div > div {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 12px !important;
+    padding: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
+}
+
+.stSidebar .stMultiSelect > div > div:hover {
+    border-color: #475569 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     transform: translateY(-1px) !important;
 }
 
-.stSlider > div > div {
-    background: #f0f0f3 !important;
-    border-radius: 12px !important;
-    box-shadow: inset 2px 2px 4px #d1d1d4, inset -2px -2px 4px #ffffff !important;
-    transition: all 0.3s ease !important;
+.stSidebar .stMultiSelect > div > div:focus-within {
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Date input styling */
-.stDateInput > div > div {
-    background: #f0f0f3 !important;
-    border-radius: 12px !important;
+/* Multi-select tags */
+.stSidebar .stMultiSelect span[data-baseweb="tag"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: #ffffff !important;
     border: none !important;
-    box-shadow: 4px 4px 8px #d1d1d4, -4px -4px 8px #ffffff !important;
-    transition: all 0.3s ease !important;
+    border-radius: 6px !important;
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
 }
 
-.stDateInput > div > div:hover {
-    box-shadow: 6px 6px 12px #d1d1d4, -6px -6px 12px #ffffff !important;
+/* Selectbox Styling */
+.stSidebar .stSelectbox > div > div {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
+}
+
+.stSidebar .stSelectbox > div > div:hover {
+    border-color: #475569 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     transform: translateY(-1px) !important;
+}
+
+.stSidebar .stSelectbox > div > div:focus-within {
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Slider Styling */
+.stSidebar .stSlider > div > div {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
+}
+
+.stSidebar .stSlider > div > div:hover {
+    border-color: #475569 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Slider track */
+.stSidebar .stSlider [data-baseweb="slider"] {
+    background: #334155 !important;
+}
+
+.stSidebar .stSlider [data-baseweb="slider"] [role="slider"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3) !important;
 }
 
 /* Additional interactive elements */
@@ -481,13 +629,56 @@ span[data-testid="metric-label"] {
     color: #ffffff !important;
 }
 
-/* Sidebar text */
+/* Modern Sidebar Text Styling */
 .stSidebar .stMarkdown {
     color: #e2e8f0 !important;
 }
 
 .stSidebar label {
+    color: #94a3b8 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+
+/* Input text colors */
+.stSidebar .stSelectbox div[data-baseweb="select"] div {
     color: #e2e8f0 !important;
+}
+
+.stSidebar .stMultiSelect div[data-baseweb="select"] div {
+    color: #e2e8f0 !important;
+}
+
+.stSidebar .stSlider div[data-baseweb="slider"] div {
+    color: #e2e8f0 !important;
+}
+
+/* Dropdown menu styling */
+.stSidebar div[data-baseweb="popover"] {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+.stSidebar div[data-baseweb="popover"] div {
+    background: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+
+.stSidebar div[data-baseweb="popover"] div:hover {
+    background: #334155 !important;
+}
+
+/* Filter spacing */
+.stSidebar > div > div > div {
+    margin-bottom: 24px !important;
+}
+
+.stSidebar > div > div > div:last-child {
+    margin-bottom: 0 !important;
 }
 
 /* Ultra-aggressive metric text fixes */
@@ -522,12 +713,59 @@ div[data-testid="metric-container"] * {
     color: #ffffff !important;
 }
 
-/* ULTRA AGGRESSIVE FIX: Hide ALL elements before the title */
-.main .block-container > div:nth-child(1):not(:has(h1)):not(:has(.stMetric)) {
+/* TARGETED FIX: Hide only empty first child elements */
+.main .block-container > div:first-child:empty {
+    display: none !important;
+}
+
+/* Hide first child only if it doesn't contain important content */
+.main .block-container > div:first-child:not(:has(h1)):not(:has([data-testid="stTitle"])):not(:has(.stMetric)) {
+    display: none !important;
+}
+
+/* Make sure title appears properly styled */
+.main h1, .stTitle h1, h1 {
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Force all Streamlit titles to be white */
+[data-testid="stTitle"] h1,
+[data-testid="stHeader"] h1,
+.main .stTitle h1 {
+    color: #ffffff !important;
+}
+
+/* ULTRA AGGRESSIVE: Hide ALL empty containers in chat tab */
+[data-baseweb="tab-panel"] > div,
+[data-baseweb="tab-panel"] .element-container,
+[data-baseweb="tab-panel"] .stVerticalBlock > div,
+[data-baseweb="tab-panel"] [data-testid="element-container"],
+[data-baseweb="tab-panel"] [data-testid="stVerticalBlock"],
+[data-baseweb="tab-panel"] .stColumn > div {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Hide empty containers completely */
+[data-baseweb="tab-panel"] > div:empty,
+[data-baseweb="tab-panel"] .element-container:empty,
+[data-baseweb="tab-panel"] .stVerticalBlock > div:empty,
+[data-baseweb="tab-panel"] [data-testid="element-container"]:empty,
+[data-baseweb="tab-panel"] [data-testid="stVerticalBlock"]:empty,
+[data-baseweb="tab-panel"] .stColumn > div:empty,
+[data-baseweb="tab-panel"] .stMarkdown:empty {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
     max-height: 0 !important;
+    min-height: 0 !important;
     overflow: hidden !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -535,87 +773,46 @@ div[data-testid="metric-container"] * {
     opacity: 0 !important;
 }
 
-/* Ensure title is visible */
-.main .block-container > div:has(h1) {
-    display: block !important;
-    visibility: visible !important;
-    height: auto !important;
-    opacity: 1 !important;
-}
-
-/* Hide empty Streamlit containers - Enhanced */
-.main .block-container > div:empty,
-.element-container:empty,
-.stVerticalBlock > div:empty,
-div[data-testid="element-container"]:empty,
-div[data-testid="stVerticalBlock"]:empty,
-div[data-testid="stHorizontalBlock"]:empty {
+/* Hide containers that only have whitespace */
+[data-baseweb="tab-panel"] > div:not(:has(*:not(:empty))),
+[data-baseweb="tab-panel"] .element-container:not(:has(*:not(:empty))),
+[data-baseweb="tab-panel"] [data-testid="element-container"]:not(:has(*:not(:empty))) {
     display: none !important;
 }
 
-/* Hide the first empty container at the top */
-.main .block-container > div:first-child:empty {
+/* Aggressively target empty divs in chat section */
+[data-baseweb="tab-panel"] div:not([class]):empty,
+[data-baseweb="tab-panel"] div[class=""]:empty,
+[data-baseweb="tab-panel"] div:not(:has(input)):not(:has(button)):not(:has(.chat-message)):not(:has(.chat-container)):empty {
     display: none !important;
 }
 
-/* Hide containers with only whitespace or invisible content */
-.main .block-container > div:not(:has(*)),
-.main .block-container > div:has(> :empty):not(:has(> :not(:empty))) {
-    display: none !important;
-}
-
-/* Hide containers that only contain empty elements */
-.main .block-container > div:has(> div:empty):not(:has(> div:not(:empty))),
-.main .block-container > div:has(> *:empty):not(:has(> *:not(:empty))) {
-    display: none !important;
-}
-
-/* Hide specific empty containers in chat tab */
-[data-baseweb="tab-panel"] > div:empty,
-[data-baseweb="tab-panel"] .element-container:empty,
-[data-baseweb="tab-panel"] .stVerticalBlock > div:empty {
-    display: none !important;
-}
-
-/* Remove margin/padding from empty containers */
-.main .block-container > div:empty {
+/* Remove spacing from containers that don't have important content */
+[data-baseweb="tab-panel"] > div:not(:has(input)):not(:has(button)):not(:has(.chat-message)):not(:has(.chat-container)):not(:has(.modern-chat-input)):not(:has(.compact-actions)) {
     margin: 0 !important;
     padding: 0 !important;
-    height: 0 !important;
     min-height: 0 !important;
-    max-height: 0 !important;
-    overflow: hidden !important;
 }
 
-/* Target specific Streamlit elements that might be empty */
-.stVerticalBlock:empty,
-.stHorizontalBlock:empty,
-[data-testid="stVerticalBlock"]:empty,
-[data-testid="stHorizontalBlock"]:empty,
-.stColumn > div:empty {
+/* Target the specific empty boxes we see in the screenshot */
+[data-baseweb="tab-panel"] > .element-container:not(:has(.chat-container)):not(:has(.modern-chat-input)):not(:has(form)) {
     display: none !important;
 }
 
-/* Hide empty markdown containers */
-.stMarkdown:empty,
-div[data-testid="stMarkdown"]:empty {
+/* Hide any div that doesn't contain essential chat elements */
+[data-baseweb="tab-panel"] > div:not(:has(.section-header)):not(:has(.chat-container)):not(:has(.modern-chat-input)):not(:has(form)):not(:has(.compact-actions)):not(:has(button)):not(:has(input)) {
     display: none !important;
 }
 
-/* Remove any empty container that only has invisible content */
-.main .block-container > *:has(> :only-child:empty) {
-    display: none !important;
-}
-
-/* Chat interface styling - Compact UX optimized */
+/* Chat interface styling - No background container */
 .chat-container {
-    background: #1e293b !important;
-    border-radius: 12px !important;
-    border: 1px solid #334155 !important;
-    padding: 12px !important;
-    margin-bottom: 12px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    max-height: 320px;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    max-height: 400px;
     overflow-y: auto;
 }
 
@@ -902,24 +1099,43 @@ div[data-testid="stMarkdown"]:empty {
 </style>
 
 <script>
-// Remove empty box at the top
-document.addEventListener('DOMContentLoaded', function() {
-    // Wait for Streamlit to fully render
-    setTimeout(function() {
-        // Find and remove the first empty container
-        const containers = document.querySelectorAll('.main .block-container > div');
-        if (containers.length > 0) {
-            const firstContainer = containers[0];
-            // Check if it's the empty box (no h1 title inside)
-            if (!firstContainer.querySelector('h1') && !firstContainer.querySelector('[data-testid="metric-container"]')) {
-                firstContainer.style.display = 'none';
+// Aggressively clean up empty containers
+function cleanupEmptyContainers() {
+    // Remove empty containers in chat tab
+    const chatTabPanel = document.querySelector('[data-baseweb="tab-panel"]:has(.section-header)');
+    if (chatTabPanel) {
+        // Find all direct children that are empty or only contain whitespace
+        const children = Array.from(chatTabPanel.children);
+        children.forEach(child => {
+            if (!child.textContent.trim() && 
+                !child.querySelector('input') && 
+                !child.querySelector('button') && 
+                !child.querySelector('form') &&
+                !child.classList.contains('chat-container') &&
+                !child.classList.contains('modern-chat-input') &&
+                !child.classList.contains('compact-actions') &&
+                !child.querySelector('.section-header')) {
+                child.style.display = 'none';
+                child.style.visibility = 'hidden';
+                child.style.height = '0';
+                child.style.margin = '0';
+                child.style.padding = '0';
             }
-        }
-    }, 100);
-});
-
-// Also try with MutationObserver for dynamic content
-const observer = new MutationObserver(function(mutations) {
+        });
+        
+        // Also target element containers specifically
+        const elementContainers = chatTabPanel.querySelectorAll('[data-testid="element-container"]');
+        elementContainers.forEach(container => {
+            if (!container.textContent.trim() && 
+                !container.querySelector('input') && 
+                !container.querySelector('button') && 
+                !container.querySelector('form')) {
+                container.style.display = 'none';
+            }
+        });
+    }
+    
+    // Remove empty containers at the top
     const containers = document.querySelectorAll('.main .block-container > div');
     if (containers.length > 0) {
         const firstContainer = containers[0];
@@ -927,11 +1143,71 @@ const observer = new MutationObserver(function(mutations) {
             firstContainer.style.display = 'none';
         }
     }
+}
+
+// Run cleanup on DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(cleanupEmptyContainers, 200);
+    setTimeout(cleanupEmptyContainers, 500);
+    setTimeout(cleanupEmptyContainers, 1000);
+});
+
+// Use MutationObserver to catch dynamically added empty containers
+const observer = new MutationObserver(function(mutations) {
+    let shouldCleanup = false;
+    mutations.forEach(mutation => {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+            shouldCleanup = true;
+        }
+    });
+    if (shouldCleanup) {
+        setTimeout(cleanupEmptyContainers, 100);
+    }
 });
 
 // Start observing when DOM is ready
 if (document.querySelector('.main')) {
     observer.observe(document.querySelector('.main'), {
+        childList: true,
+        subtree: true
+    });
+}
+
+// Enhance sidebar toggle functionality
+function enhanceSidebarToggle() {
+    const toggleButton = document.querySelector('button[data-testid="collapsedControl"]');
+    if (toggleButton) {
+        // Ensure button is always visible and styled
+        toggleButton.style.display = 'flex';
+        toggleButton.style.alignItems = 'center';
+        toggleButton.style.justifyContent = 'center';
+        toggleButton.style.visibility = 'visible';
+        toggleButton.style.opacity = '1';
+        
+        // Add tooltip
+        toggleButton.title = 'Toggle Filters Panel';
+        
+        // Add custom icon if not present
+        if (!toggleButton.textContent.includes('🎛️')) {
+            toggleButton.innerHTML = '<span style="font-size: 20px;">🎛️</span>';
+        }
+    }
+}
+
+// Run sidebar enhancement
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(enhanceSidebarToggle, 500);
+    setTimeout(enhanceSidebarToggle, 1000);
+    setTimeout(enhanceSidebarToggle, 2000);
+});
+
+// Also run on any DOM changes
+const sidebarObserver = new MutationObserver(function(mutations) {
+    enhanceSidebarToggle();
+});
+
+if (document.body) {
+    sidebarObserver.observe(document.body, {
         childList: true,
         subtree: true
     });
@@ -1060,8 +1336,7 @@ def main():
     if conversations_df is None:
         return
     
-    # Title - Using st.title instead of markdown to avoid empty container
-    st.title('Customer Contact Centre Analytics Dashboard')
+    # No title - KPIs should appear first
     
     # Sidebar filters
     with st.sidebar:
@@ -1436,7 +1711,7 @@ def main():
             
             with col1:
                 user_input = st.text_input(
-                    "",
+                    "Chat Input",
                     key="chat_input", 
                     placeholder="Ask about your analytics...",
                     label_visibility="collapsed",
