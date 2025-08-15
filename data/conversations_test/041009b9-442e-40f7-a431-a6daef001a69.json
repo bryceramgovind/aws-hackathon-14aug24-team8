@@ -1,0 +1,86 @@
+[
+  {
+    "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+    "start_date": "2024-01-03T15:43:00+10:00",
+    "end_date": "2024-01-03T15:47:21+10:00",
+    "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+    "phone_number": "0417708826",
+    "chat_user_id": "4a670f7e-a456-4b87-9f9e-a81412f9aa6f",
+    "chat_text": "I want to upgrade to a bigger data plan",
+    "chat_time_shift": 0,
+    "chat_user_type": "customer",
+    "message_number": 1
+  },
+  {
+    "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+    "start_date": "2024-01-03T15:43:00+10:00",
+    "end_date": "2024-01-03T15:47:21+10:00",
+    "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+    "phone_number": "0417708826",
+    "chat_user_id": "2eb441e8-68fe-42d7-bc61-487e3651ff1c",
+    "chat_text": "Hello! I'm Nathan from customer service. I'd be happy to help you with your plan change request. Let me pull up your account details.",
+    "chat_time_shift": 32,
+    "chat_user_type": "agent",
+    "message_number": 2
+  },
+  {
+    "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+    "start_date": "2024-01-03T15:43:00+10:00",
+    "end_date": "2024-01-03T15:47:21+10:00",
+    "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+    "phone_number": "0417708826",
+    "chat_user_id": "4a670f7e-a456-4b87-9f9e-a81412f9aa6f",
+    "chat_text": "yes please",
+    "chat_time_shift": 81,
+    "chat_user_type": "customer",
+    "message_number": 3
+  },
+  {
+    "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+    "start_date": "2024-01-03T15:43:00+10:00",
+    "end_date": "2024-01-03T15:47:21+10:00",
+    "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+    "phone_number": "0417708826",
+    "chat_user_id": "2eb441e8-68fe-42d7-bc61-487e3651ff1c",
+    "chat_text": "I've added a note to your account about this issue.",
+    "chat_time_shift": 118,
+    "chat_user_type": "agent",
+    "message_number": 4
+  },
+  {
+    "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+    "start_date": "2024-01-03T15:43:00+10:00",
+    "end_date": "2024-01-03T15:47:21+10:00",
+    "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+    "phone_number": "0417708826",
+    "chat_user_id": "4a670f7e-a456-4b87-9f9e-a81412f9aa6f",
+    "chat_text": "when will it be activated?",
+    "chat_time_shift": 149,
+    "chat_user_type": "customer",
+    "message_number": 5
+  },
+  {
+    "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+    "start_date": "2024-01-03T15:43:00+10:00",
+    "end_date": "2024-01-03T15:47:21+10:00",
+    "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+    "phone_number": "0417708826",
+    "chat_user_id": "2eb441e8-68fe-42d7-bc61-487e3651ff1c",
+    "chat_text": "I've added a note to your account about this issue.",
+    "chat_time_shift": 206,
+    "chat_user_type": "agent",
+    "message_number": 6
+  },
+  {
+    "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+    "start_date": "2024-01-03T15:43:00+10:00",
+    "end_date": "2024-01-03T15:47:21+10:00",
+    "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+    "phone_number": "0417708826",
+    "chat_user_id": "4a670f7e-a456-4b87-9f9e-a81412f9aa6f",
+    "chat_text": "when will it be activated?",
+    "chat_time_shift": 261,
+    "chat_user_type": "customer",
+    "message_number": 7
+  }
+]

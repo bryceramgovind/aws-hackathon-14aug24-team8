@@ -1,0 +1,110 @@
+[
+  {
+    "contact_id": "0f19d256-4f15-44cd-b7d1-e79b2878f8bd",
+    "start_date": "2024-01-27T13:15:00+10:00",
+    "end_date": "2024-01-27T13:20:53+10:00",
+    "chat_id": "8def6036-6d84-447d-9e36-a39821cc6116",
+    "phone_number": "0452050679",
+    "chat_user_id": "0141d7a7-54a6-4e79-afbb-7a45fe9d5804",
+    "chat_text": "I want to add a travel pack for my trip to Japan",
+    "chat_time_shift": 0,
+    "chat_user_type": "customer",
+    "message_number": 1
+  },
+  {
+    "contact_id": "0f19d256-4f15-44cd-b7d1-e79b2878f8bd",
+    "start_date": "2024-01-27T13:15:00+10:00",
+    "end_date": "2024-01-27T13:20:53+10:00",
+    "chat_id": "8def6036-6d84-447d-9e36-a39821cc6116",
+    "phone_number": "0452050679",
+    "chat_user_id": "342e1fdd-35f1-445d-a12b-227be0866e51",
+    "chat_text": "Hello! I'm Sarah from customer service. I'd be happy to help you with your international roaming query. Let me pull up your account details.",
+    "chat_time_shift": 41,
+    "chat_user_type": "agent",
+    "message_number": 2
+  },
+  {
+    "contact_id": "0f19d256-4f15-44cd-b7d1-e79b2878f8bd",
+    "start_date": "2024-01-27T13:15:00+10:00",
+    "end_date": "2024-01-27T13:20:53+10:00",
+    "chat_id": "8def6036-6d84-447d-9e36-a39821cc6116",
+    "phone_number": "0452050679",
+    "chat_user_id": "0141d7a7-54a6-4e79-afbb-7a45fe9d5804",
+    "chat_text": "yes please, I leave in 3 days",
+    "chat_time_shift": 89,
+    "chat_user_type": "customer",
+    "message_number": 3
+  },
+  {
+    "contact_id": "0f19d256-4f15-44cd-b7d1-e79b2878f8bd",
+    "start_date": "2024-01-27T13:15:00+10:00",
+    "end_date": "2024-01-27T13:20:53+10:00",
+    "chat_id": "8def6036-6d84-447d-9e36-a39821cc6116",
+    "phone_number": "0452050679",
+    "chat_user_id": "342e1fdd-35f1-445d-a12b-227be0866e51",
+    "chat_text": "I can definitely help you set up roaming. We have a few options available. Our daily roaming pack is $5/day for 200MB, or you can use pay-as-you-go at $3/MB. Which would you prefer?",
+    "chat_time_shift": 163,
+    "chat_user_type": "agent",
+    "message_number": 4
+  },
+  {
+    "contact_id": "0f19d256-4f15-44cd-b7d1-e79b2878f8bd",
+    "start_date": "2024-01-27T13:15:00+10:00",
+    "end_date": "2024-01-27T13:20:53+10:00",
+    "chat_id": "8def6036-6d84-447d-9e36-a39821cc6116",
+    "phone_number": "0452050679",
+    "chat_user_id": "0141d7a7-54a6-4e79-afbb-7a45fe9d5804",
+    "chat_text": "no that's not what I want",
+    "chat_time_shift": 249,
+    "chat_user_type": "customer",
+    "message_number": 5
+  },
+  {
+    "contact_id": "0f19d256-4f15-44cd-b7d1-e79b2878f8bd",
+    "start_date": "2024-01-27T13:15:00+10:00",
+    "end_date": "2024-01-27T13:20:53+10:00",
+    "chat_id": "8def6036-6d84-447d-9e36-a39821cc6116",
+    "phone_number": "0452050679",
+    "chat_user_id": "342e1fdd-35f1-445d-a12b-227be0866e51",
+    "chat_text": "Is there anything else I can help you with today?",
+    "chat_time_shift": 272,
+    "chat_user_type": "agent",
+    "message_number": 6
+  },
+  {
+    "contact_id": "0f19d256-4f15-44cd-b7d1-e79b2878f8bd",
+    "start_date": "2024-01-27T13:15:00+10:00",
+    "end_date": "2024-01-27T13:20:53+10:00",
+    "chat_id": "8def6036-6d84-447d-9e36-a39821cc6116",
+    "phone_number": "0452050679",
+    "chat_user_id": "0141d7a7-54a6-4e79-afbb-7a45fe9d5804",
+    "chat_text": "no that's not what I want",
+    "chat_time_shift": 289,
+    "chat_user_type": "customer",
+    "message_number": 7
+  },
+  {
+    "contact_id": "0f19d256-4f15-44cd-b7d1-e79b2878f8bd",
+    "start_date": "2024-01-27T13:15:00+10:00",
+    "end_date": "2024-01-27T13:20:53+10:00",
+    "chat_id": "8def6036-6d84-447d-9e36-a39821cc6116",
+    "phone_number": "0452050679",
+    "chat_user_id": "342e1fdd-35f1-445d-a12b-227be0866e51",
+    "chat_text": "I've processed that request for you. It will be active within the next hour.",
+    "chat_time_shift": 306,
+    "chat_user_type": "agent",
+    "message_number": 8
+  },
+  {
+    "contact_id": "0f19d256-4f15-44cd-b7d1-e79b2878f8bd",
+    "start_date": "2024-01-27T13:15:00+10:00",
+    "end_date": "2024-01-27T13:20:53+10:00",
+    "chat_id": "8def6036-6d84-447d-9e36-a39821cc6116",
+    "phone_number": "0452050679",
+    "chat_user_id": "0141d7a7-54a6-4e79-afbb-7a45fe9d5804",
+    "chat_text": "no that's not what I want",
+    "chat_time_shift": 353,
+    "chat_user_type": "customer",
+    "message_number": 9
+  }
+]

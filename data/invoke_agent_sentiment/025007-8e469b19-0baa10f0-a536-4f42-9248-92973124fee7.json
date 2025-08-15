@@ -1,0 +1,224 @@
+{
+  "batch_info": {
+    "timestamp": "2025-08-15T02:50:07.276767",
+    "session_id": "8e469b19-9b57-4e19-821e-e74345d406c3",
+    "s3_folder": "conversations_test",
+    "total_files_processed": 2,
+    "total_messages_processed": 11,
+    "user_input": "Run instruction for all contact_ids found. If multiple conversations are found, return all details from them.",
+    "status": "batch_complete"
+  },
+  "files_summary": [
+    {
+      "file": "conversations_test/041009b9-442e-40f7-a431-a6daef001a69.json",
+      "messages_count": 7,
+      "messages_processed": 7,
+      "processed_at": "2025-08-15T02:46:54.920271"
+    },
+    {
+      "file": "conversations_test/0baa10f0-a536-4f42-9248-92973124fee7.json",
+      "error": "An error occurred (internalServerException) when calling the InvokeAgent operation: Internal Server Exception",
+      "processed_at": "2025-08-15T02:50:07.276748"
+    }
+  ],
+  "all_message_responses": [
+    {
+      "file": "conversations_test/041009b9-442e-40f7-a431-a6daef001a69.json",
+      "message_index": 0,
+      "message_data": {
+        "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+        "start_date": "2024-01-03T15:43:00+10:00",
+        "end_date": "2024-01-03T15:47:21+10:00",
+        "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+        "phone_number": "0417708826",
+        "chat_user_id": "4a670f7e-a456-4b87-9f9e-a81412f9aa6f",
+        "chat_text": "I want to upgrade to a bigger data plan",
+        "chat_time_shift": 0,
+        "chat_user_type": "customer",
+        "message_number": 1
+      },
+      "agent_response": "[\n  {\n    \"message_id\": \"msg_001\",\n    \"contact_id\": \"f5fa5f70-6197-4007-8677-19b84beb28ce\",\n    \"message_number\": 1,\n    \"user_type\": \"customer\",\n    \"timestamp\": \"2024-02-07T13:57:00+10:00\",\n    \"sentiment_score\": -0.3,\n    \"empathy_score\": null,\n    \"detected_topics\": [\"plan change\", \"downgrade\"],\n    \"intent\": \"request downgrade\",\n    \"emotion\": \"frustrated\"\n  },\n  {\n    \"message_id\": \"msg_002\",\n    \"contact_id\": \"f5fa5f70-6197-4007-8677-19b84beb28ce\",\n    \"message_number\": 2,\n    \"user_type\": \"agent\",\n    \"timestamp\": \"2024-02-07T13:57:45+10:00\",\n    \"sentiment_score\": 0.2,\n    \"empathy_score\": 0.7,\n    \"detected_topics\": [\"greeting\", \"account check\"],\n    \"intent\": \"acknowledge request\",\n    \"emotion\": \"neutral\"\n  },\n  {\n    \"message_id\": \"msg_003\",\n    \"contact_id\": \"f5fa5f70-6197-4007-8677-19b84beb28ce\",\n    \"message_number\": 3,\n    \"user_type\": \"customer\",\n    \"timestamp\": \"2024-02-07T13:59:11+10:00\",\n    \"sentiment_score\": -0.5,\n    \"empathy_score\": null,\n    \"detected_topics\": [\"complaint\"],\n    \"intent\": \"express dissatisfaction\",\n    \"emotion\": \"angry\"\n  },\n  {\n    \"message_id\": \"msg_004\",\n    \"contact_id\": \"f5fa5f70-6197-4007-8677-19b84beb28ce\",\n    \"message_number\": 4,\n    \"user_type\": \"agent\",\n    \"timestamp\": \"2024-02-07T13:59:40+10:00\",\n    \"sentiment_score\": 0.3,\n    \"empathy_score\": 0.8,\n    \"detected_topics\": [\"options\"],\n    \"intent\": \"offer alternatives\",\n    \"emotion\": \"neutral\"\n  },\n  {\n    \"message_id\": \"msg_005\",\n    \"contact_id\": \"f5fa5f70-6197-4007-8677-19b84beb28ce\",\n    \"message_number\": 5,\n    \"user_type\": \"customer\",\n    \"timestamp\": \"2024-02-07T14:00:00+10:00\",\n    \"sentiment_score\": 0.2,\n    \"empathy_score\": null,\n    \"detected_topics\": [\"agreement\"],\n    \"intent\": \"accept suggestion\",\n    \"emotion\": \"neutral\"\n  },\n  {\n    \"message_id\": \"msg_006\",\n    \"contact_id\":",
+      "processed_at": "2025-08-15T02:45:26.253946"
+    },
+    {
+      "file": "conversations_test/041009b9-442e-40f7-a431-a6daef001a69.json",
+      "message_index": 1,
+      "message_data": {
+        "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+        "start_date": "2024-01-03T15:43:00+10:00",
+        "end_date": "2024-01-03T15:47:21+10:00",
+        "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+        "phone_number": "0417708826",
+        "chat_user_id": "2eb441e8-68fe-42d7-bc61-487e3651ff1c",
+        "chat_text": "Hello! I'm Nathan from customer service. I'd be happy to help you with your plan change request. Let me pull up your account details.",
+        "chat_time_shift": 32,
+        "chat_user_type": "agent",
+        "message_number": 2
+      },
+      "agent_response": "[\n  {\n    \"message_id\": \"msg_002\",\n    \"contact_id\": \"041009b9-442e-40f7-a431-a6daef001a69\",\n    \"message_number\": 2,\n    \"user_type\": \"agent\",\n    \"timestamp\": \"2024-01-03T15:43:32+10:00\",\n    \"sentiment_score\": 0.3,\n    \"empathy_score\": 0.8,\n    \"detected_topics\": [\"greeting\", \"account assistance\", \"plan change\"],\n    \"intent\": \"offer help\",\n    \"emotion\": \"neutral\"\n  }\n]",
+      "processed_at": "2025-08-15T02:45:44.164587"
+    },
+    {
+      "file": "conversations_test/041009b9-442e-40f7-a431-a6daef001a69.json",
+      "message_index": 2,
+      "message_data": {
+        "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+        "start_date": "2024-01-03T15:43:00+10:00",
+        "end_date": "2024-01-03T15:47:21+10:00",
+        "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+        "phone_number": "0417708826",
+        "chat_user_id": "4a670f7e-a456-4b87-9f9e-a81412f9aa6f",
+        "chat_text": "yes please",
+        "chat_time_shift": 81,
+        "chat_user_type": "customer",
+        "message_number": 3
+      },
+      "agent_response": "[\n  {\n    \"message_id\": \"msg_003\",\n    \"contact_id\": \"041009b9-442e-40f7-a431-a6daef001a69\",\n    \"message_number\": 3,\n    \"user_type\": \"customer\",\n    \"timestamp\": \"2024-01-03T15:44:21+10:00\",\n    \"sentiment_score\": 0.4,\n    \"empathy_score\": null,\n    \"detected_topics\": [\"confirmation\"],\n    \"intent\": \"confirm request\",\n    \"emotion\": \"neutral\"\n  }\n]",
+      "processed_at": "2025-08-15T02:46:01.581309"
+    },
+    {
+      "file": "conversations_test/041009b9-442e-40f7-a431-a6daef001a69.json",
+      "message_index": 3,
+      "message_data": {
+        "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+        "start_date": "2024-01-03T15:43:00+10:00",
+        "end_date": "2024-01-03T15:47:21+10:00",
+        "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+        "phone_number": "0417708826",
+        "chat_user_id": "2eb441e8-68fe-42d7-bc61-487e3651ff1c",
+        "chat_text": "I've added a note to your account about this issue.",
+        "chat_time_shift": 118,
+        "chat_user_type": "agent",
+        "message_number": 4
+      },
+      "agent_response": "[\n  {\n    \"message_id\": \"msg_004\",\n    \"contact_id\": \"041009b9-442e-40f7-a431-a6daef001a69\",\n    \"message_number\": 4,\n    \"user_type\": \"agent\",\n    \"timestamp\": \"2024-01-03T15:44:58+10:00\",\n    \"sentiment_score\": 0.0,\n    \"empathy_score\": 0.6,\n    \"detected_topics\": [\"account update\", \"issue documentation\"],\n    \"intent\": \"inform action taken\",\n    \"emotion\": \"neutral\"\n  }\n]",
+      "processed_at": "2025-08-15T02:46:15.017035"
+    },
+    {
+      "file": "conversations_test/041009b9-442e-40f7-a431-a6daef001a69.json",
+      "message_index": 4,
+      "message_data": {
+        "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+        "start_date": "2024-01-03T15:43:00+10:00",
+        "end_date": "2024-01-03T15:47:21+10:00",
+        "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+        "phone_number": "0417708826",
+        "chat_user_id": "4a670f7e-a456-4b87-9f9e-a81412f9aa6f",
+        "chat_text": "when will it be activated?",
+        "chat_time_shift": 149,
+        "chat_user_type": "customer",
+        "message_number": 5
+      },
+      "agent_response": "[\n  {\n    \"message_id\": \"msg_005\",\n    \"contact_id\": \"041009b9-442e-40f7-a431-a6daef001a69\",\n    \"message_number\": 5,\n    \"user_type\": \"customer\",\n    \"timestamp\": \"2024-01-03T15:45:29+10:00\",\n    \"sentiment_score\": -0.2,\n    \"empathy_score\": null,\n    \"detected_topics\": [\"activation timeline\"],\n    \"intent\": \"request information\",\n    \"emotion\": \"confused\"\n  }\n]",
+      "processed_at": "2025-08-15T02:46:28.666548"
+    },
+    {
+      "file": "conversations_test/041009b9-442e-40f7-a431-a6daef001a69.json",
+      "message_index": 5,
+      "message_data": {
+        "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+        "start_date": "2024-01-03T15:43:00+10:00",
+        "end_date": "2024-01-03T15:47:21+10:00",
+        "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+        "phone_number": "0417708826",
+        "chat_user_id": "2eb441e8-68fe-42d7-bc61-487e3651ff1c",
+        "chat_text": "I've added a note to your account about this issue.",
+        "chat_time_shift": 206,
+        "chat_user_type": "agent",
+        "message_number": 6
+      },
+      "agent_response": "[\n  {\n    \"message_id\": \"msg_006\",\n    \"contact_id\": \"041009b9-442e-40f7-a431-a6daef001a69\",\n    \"message_number\": 6,\n    \"user_type\": \"agent\",\n    \"timestamp\": \"2024-01-03T15:46:36+10:00\",\n    \"sentiment_score\": 0.0,\n    \"empathy_score\": 0.6,\n    \"detected_topics\": [\"account update\"],\n    \"intent\": \"inform action taken\",\n    \"emotion\": \"neutral\"\n  }\n]\n",
+      "processed_at": "2025-08-15T02:46:42.034749"
+    },
+    {
+      "file": "conversations_test/041009b9-442e-40f7-a431-a6daef001a69.json",
+      "message_index": 6,
+      "message_data": {
+        "contact_id": "041009b9-442e-40f7-a431-a6daef001a69",
+        "start_date": "2024-01-03T15:43:00+10:00",
+        "end_date": "2024-01-03T15:47:21+10:00",
+        "chat_id": "6b7143d6-32b2-44a9-b610-4799f385b1fe",
+        "phone_number": "0417708826",
+        "chat_user_id": "4a670f7e-a456-4b87-9f9e-a81412f9aa6f",
+        "chat_text": "when will it be activated?",
+        "chat_time_shift": 261,
+        "chat_user_type": "customer",
+        "message_number": 7
+      },
+      "agent_response": "[\n  {\n    \"message_id\": \"msg_007\",\n    \"contact_id\": \"041009b9-442e-40f7-a431-a6daef001a69\",\n    \"message_number\": 7,\n    \"user_type\": \"customer\",\n    \"timestamp\": \"2024-01-03T15:47:01+10:00\",\n    \"sentiment_score\": -0.3,\n    \"empathy_score\": null,\n    \"detected_topics\": [\"activation timeline\"],\n    \"intent\": \"request information\",\n    \"emotion\": \"frustrated\"\n  }\n]",
+      "processed_at": "2025-08-15T02:46:54.920212"
+    },
+    {
+      "file": "conversations_test/0baa10f0-a536-4f42-9248-92973124fee7.json",
+      "message_index": 0,
+      "message_data": {
+        "contact_id": "0baa10f0-a536-4f42-9248-92973124fee7",
+        "start_date": "2024-01-27T16:32:00+10:00",
+        "end_date": "2024-01-27T16:48:23+10:00",
+        "chat_id": "99f1a22d-6593-4bd7-bed4-d354d212363c",
+        "phone_number": "0415201250",
+        "chat_user_id": "188b4b68-93f5-472f-aaf7-c0fc3067d98a",
+        "chat_text": "I'm interested in getting a new phone with a plan",
+        "chat_time_shift": 0,
+        "chat_user_type": "customer",
+        "message_number": 1
+      },
+      "agent_response": "[\n  {\n    \"message_id\": \"msg_001\",\n    \"contact_id\": \"0baa10f0-a536-4f42-9248-92973124fee7\",\n    \"message_number\": 1,\n    \"user_type\": \"customer\",\n    \"timestamp\": \"2024-01-27T16:32:00+10:00\",\n    \"sentiment_score\": 0.6,\n    \"empathy_score\": null,\n    \"detected_topics\": [\"new phone\", \"plan inquiry\"],\n    \"intent\": \"request information\",\n    \"emotion\": \"neutral\"\n  },\n  {\n    \"message_id\": \"msg_002\",\n    \"contact_id\": \"0baa10f0-a536-4f42-9248-92973124fee7\",\n    \"message_number\": 2,\n    \"user_type\": \"agent\",\n    \"timestamp\": \"2024-01-27T16:32:54+10:00\",\n    \"sentiment_score\": 0.2,\n    \"empathy_score\": 0.7,\n    \"detected_topics\": [\"greeting\", \"account assistance\"],\n    \"intent\": \"offer help\",\n    \"emotion\": \"neutral\"\n  },\n  {\n    \"message_id\": \"msg_003\",\n    \"contact_id\": \"0baa10f0-a536-4f42-9248-92973124fee7\",\n    \"message_number\": 3,\n    \"user_type\": \"customer\",\n    \"timestamp\": \"2024-01-27T16:33:28+10:00\",\n    \"sentiment_score\": 0.1,\n    \"empathy_score\": null,\n    \"detected_topics\": [\"clarification request\"],\n    \"intent\": \"request clarification\",\n    \"emotion\": \"confused\"\n  },\n  {\n    \"message_id\": \"msg_004\",\n    \"contact_id\": \"0baa10f0-a536-4f42-9248-92973124fee7\",\n    \"message_number\": 4,\n    \"user_type\": \"agent\",\n    \"timestamp\": \"2024-01-27T16:33:54+10:00\",\n    \"sentiment_score\": 0.3,\n    \"empathy_score\": 0.8,\n    \"detected_topics\": [\"options\"],\n    \"intent\": \"offer alternatives\",\n    \"emotion\": \"neutral\"\n  },\n  {\n    \"message_id\": \"msg_005\",\n    \"contact_id\": \"0baa10f0-a536-4f42-9248-92973124fee7\",\n    \"message_number\": 5,\n    \"user_type\": \"customer\",\n    \"timestamp\": \"2024-01-27T16:34:47+10:00\",\n    \"sentiment_score\": -0.1,\n    \"empathy_score\": null,\n    \"detected_topics\": [\"clarification request\"],\n    \"intent\": \"request clarification\",\n    \"emotion\": \"confused\"\n  },\n  {\n    \"message_id\": \"msg_006\",\n    \"contact_id\": \"0baa10f0-a536-4f42-",
+      "processed_at": "2025-08-15T02:48:05.844712"
+    },
+    {
+      "file": "conversations_test/0baa10f0-a536-4f42-9248-92973124fee7.json",
+      "message_index": 1,
+      "message_data": {
+        "contact_id": "0baa10f0-a536-4f42-9248-92973124fee7",
+        "start_date": "2024-01-27T16:32:00+10:00",
+        "end_date": "2024-01-27T16:48:23+10:00",
+        "chat_id": "99f1a22d-6593-4bd7-bed4-d354d212363c",
+        "phone_number": "0415201250",
+        "chat_user_id": "47fb17e0-afad-4812-b421-df9fd6bb1ca4",
+        "chat_text": "Hi there! I'm Sophie and I'll assist you today. I understand you're having your inquiry about our services. Let me look into this for you.",
+        "chat_time_shift": 54,
+        "chat_user_type": "agent",
+        "message_number": 2
+      },
+      "agent_response": "[\n  {\n    \"message_id\": \"msg_002\",\n    \"contact_id\": \"0baa10f0-a536-4f42-9248-92973124fee7\",\n    \"message_number\": 2,\n    \"user_type\": \"agent\",\n    \"timestamp\": \"2024-01-27T16:32:54+10:00\",\n    \"sentiment_score\": 0.2,\n    \"empathy_score\": 0.8,\n    \"detected_topics\": [\"greeting\", \"account assistance\"],\n    \"intent\": \"offer help\",\n    \"emotion\": \"neutral\"\n  }\n]",
+      "processed_at": "2025-08-15T02:48:27.481968"
+    },
+    {
+      "file": "conversations_test/0baa10f0-a536-4f42-9248-92973124fee7.json",
+      "message_index": 2,
+      "message_data": {
+        "contact_id": "0baa10f0-a536-4f42-9248-92973124fee7",
+        "start_date": "2024-01-27T16:32:00+10:00",
+        "end_date": "2024-01-27T16:48:23+10:00",
+        "chat_id": "99f1a22d-6593-4bd7-bed4-d354d212363c",
+        "phone_number": "0415201250",
+        "chat_user_id": "188b4b68-93f5-472f-aaf7-c0fc3067d98a",
+        "chat_text": "can you explain more?",
+        "chat_time_shift": 88,
+        "chat_user_type": "customer",
+        "message_number": 3
+      },
+      "agent_response": "[\n  {\n    \"message_id\": \"msg_003\",\n    \"contact_id\": \"0baa10f0-a536-4f42-9248-92973124fee7\",\n    \"message_number\": 3,\n    \"user_type\": \"customer\",\n    \"timestamp\": \"2024-01-27T16:33:28+10:00\",\n    \"sentiment_score\": 0.0,\n    \"empathy_score\": null,\n    \"detected_topics\": [\"clarification request\"],\n    \"intent\": \"request clarification\",\n    \"emotion\": \"confused\"\n  }\n]",
+      "processed_at": "2025-08-15T02:48:47.502812"
+    },
+    {
+      "file": "conversations_test/0baa10f0-a536-4f42-9248-92973124fee7.json",
+      "message_index": 3,
+      "message_data": {
+        "contact_id": "0baa10f0-a536-4f42-9248-92973124fee7",
+        "start_date": "2024-01-27T16:32:00+10:00",
+        "end_date": "2024-01-27T16:48:23+10:00",
+        "chat_id": "99f1a22d-6593-4bd7-bed4-d354d212363c",
+        "phone_number": "0415201250",
+        "chat_user_id": "47fb17e0-afad-4812-b421-df9fd6bb1ca4",
+        "chat_text": "I understand your concern. Let me see what other options we have.",
+        "chat_time_shift": 164,
+        "chat_user_type": "agent",
+        "message_number": 4
+      },
+      "agent_response": "[\n  {\n    \"message_id\": \"msg_004\",\n    \"contact_id\": \"0baa10f0-a536-4f42-9248-92973124fee7\",\n    \"message_number\": 4,\n    \"user_type\": \"agent\",\n    \"timestamp\": \"2024-01-27T16:34:54+10:00\",\n    \"sentiment_score\": 0.3,\n    \"empathy_score\": 0.8,\n    \"detected_topics\": [\"options\", \"account assistance\"],\n    \"intent\": \"offer alternatives\",\n    \"emotion\": \"neutral\"\n  }\n]",
+      "processed_at": "2025-08-15T02:49:08.116393"
+    }
+  ]
+}
